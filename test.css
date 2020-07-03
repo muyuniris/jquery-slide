@@ -1,0 +1,45 @@
+.slide-wrap{
+  overflow: hidden;
+  width: 200px;
+  position: relative;
+  /* height: 100px; */
+}
+.slide-box{
+  width: 600px;
+  
+}
+.slide-box::before,.slide-box::after{
+  display: table;
+  content: "";
+}
+.slide-box::after{
+  clear: both;
+}
+.slide-item{
+  float: left;
+  width: 200px;
+  height: 100px;
+  background: rgb(122, 114, 114);
+}
+
+/* 小圆点 */
+.slide-circle{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.slide-circle a{
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border: 3px solid white;
+  border-radius: 50%;
+  opacity: 0.5;
+  margin: 0 5px;
+}
+/* 小圆点选中样式 */
+.slide-circle .check{
+  opacity: 1;
+}
